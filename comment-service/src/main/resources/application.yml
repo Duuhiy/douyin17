@@ -1,0 +1,48 @@
+server:
+  port: 9001
+spring:
+  application:
+    name: comment-service
+  main:
+    allow-circular-references: true
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/spring-douyin?characterEncoding=utf8&useSSL=false&serverTimezone=UTC
+    username: root
+    password: 123456
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+  data:
+    host: 127.0.0.1
+    port: 6379
+    #    password: 123456
+    lettuce:
+      pool:
+        max-active: 10
+        max-idle: 10
+        min-idle: 1
+        time-between-eviction-runs: 10s
+  cloud:
+    nacos:
+      serverAddr: 127.0.0.1:8848 #如果用的云上托管版本，输入可访问的Nacos Server地址即可
+  kafka:
+    producer:
+      bootstrap-servers: localhost:9092
+      batch-size: 16384
+      buffer-memory: 33554432
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+      retries: 0
+    consumer:
+      bootstrap-servers: localhost:9092
+      auto-offset-reset: earliest
+      max-poll-records: 2
+      enable-auto-commit: false
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+  type-aliases-package: org.example.entity
+  mapper-locations: classpath:mapper/*.xml
+pagehelper:
+  propertyName: propertyValue
+  reasonable: false
+  defaultCount: true # 分页插件默认参数支持 default-count 形式，自定义扩展的参数，必须大小写一致

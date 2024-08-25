@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.example.mapper.CommentMapper">
+    <insert id="insertCommentIndex">
+        insert into
+            comment_index (id, video_id, user_id, root, parent)
+        VALUES
+            (#{id}, #{videoId}, #{userId}, #{root}, #{parent});
+    </insert>
+    <insert id="insertCommentContent" useGeneratedKeys="true" keyProperty="id">
+        insert into comment_content (content)
+        values (#{content});
+    </insert>
+    <select id="queryIndex" resultType="Comment">
+        select id, ctime from comment_index where video_id = #{videoId} and root = #{root} order by ctime;
+    </select>
+    <select id="queryComments" resultType="Comment">
+        select i.id, i.video_id, i.user_id, i.root, i.parent, c.content, i.ctime, i.mtime
+        from
+            comment_index i join comment_content c on i.id = c.id
+        where
+            i.id in
+        <foreach collection="ids" item="id" index="index" open="(" close=")" separator=",">
+            #{id}
+        </foreach>
+        order by ctime;
+    </select>
+    <select id="queryCommentsByRoot" resultType="Comment">
+        select * from comment where video_id = #{videoId} and root = #{root} order by ctime;
+    </select>
+
+</mapper>

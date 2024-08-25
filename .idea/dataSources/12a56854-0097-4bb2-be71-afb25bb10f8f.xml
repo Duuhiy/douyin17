@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="spring-douyin@localhost">
+  <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.48">
+    <root id="1">
+      <DefaultCasing>lower/lower</DefaultCasing>
+      <DefaultEngine>InnoDB</DefaultEngine>
+      <DefaultTmpEngine>InnoDB</DefaultTmpEngine>
+      <ServerVersion>8.0.33</ServerVersion>
+    </root>
+    <schema id="2" parent="1" name="bluebell"/>
+    <schema id="3" parent="1" name="bubble"/>
+    <schema id="4" parent="1" name="cloud2024"/>
+    <schema id="5" parent="1" name="db01"/>
+    <schema id="6" parent="1" name="db02"/>
+    <schema id="7" parent="1" name="db03"/>
+    <schema id="8" parent="1" name="dbmybatis"/>
+    <schema id="9" parent="1" name="douyin"/>
+    <schema id="10" parent="1" name="go_zero"/>
+    <schema id="11" parent="1" name="goods_mx"/>
+    <schema id="12" parent="1" name="gorm_demo"/>
+    <schema id="13" parent="1" name="hmdp"/>
+    <schema id="14" parent="1" name="information_schema"/>
+    <schema id="15" parent="1" name="itheima"/>
+    <schema id="16" parent="1" name="jdbc"/>
+    <schema id="17" parent="1" name="learn"/>
+    <schema id="18" parent="1" name="mall"/>
+    <schema id="19" parent="1" name="mxshop_inventory"/>
+    <schema id="20" parent="1" name="mxshop_order"/>
+    <schema id="21" parent="1" name="mxshop_user"/>
+    <schema id="22" parent="1" name="mxshop_userop"/>
+    <schema id="23" parent="1" name="mybatis-example"/>
+    <schema id="24" parent="1" name="mysql"/>
+    <schema id="25" parent="1" name="performance_schema"/>
+    <schema id="26" parent="1" name="product"/>
+    <schema id="27" parent="1" name="sakila"/>
+    <schema id="28" parent="1" name="seata"/>
+    <schema id="29" parent="1" name="seata_account"/>
+    <schema id="30" parent="1" name="seata_order"/>
+    <schema id="31" parent="1" name="seata_storage"/>
+    <schema id="32" parent="1" name="spring-douyin">
+      <Current>1</Current>
+    </schema>
+    <schema id="33" parent="1" name="springboot-dao"/>
+    <schema id="34" parent="1" name="sys"/>
+    <schema id="35" parent="1" name="tlias"/>
+    <schema id="36" parent="1" name="ver_base"/>
+    <schema id="37" parent="1" name="world"/>
+    <table id="38" parent="32" name="comment">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="39" parent="32" name="comment_content">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="40" parent="32" name="comment_index">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="41" parent="32" name="message">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="42" parent="32" name="relation">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="43" parent="32" name="room">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="44" parent="32" name="timeline">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+    </table>
+    <table id="45" parent="32" name="user">
+      <Comment>user table</Comment>
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_general_ci</CollationName>
+    </table>
+    <column id="46" parent="38" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <DasType>int|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="47" parent="38" name="video_id">
+      <DasType>int|0s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="48" parent="38" name="user_id">
+      <DasType>int|0s</DasType>
+      <Position>3</Position>
+    </column>
+    <column id="49" parent="38" name="root">
+      <DasType>int|0s</DasType>
+      <Position>4</Position>
+    </column>
+    <column id="50" parent="38" name="parent">
+      <DasType>int|0s</DasType>
+      <Position>5</Position>
+    </column>
+    <column id="51" parent="38" name="content">
+      <DasType>varchar(500)|0s</DasType>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+    </column>
+    <column id="52" parent="38" name="ctime">
+      <DasType>datetime|0s</DasType>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <Position>7</Position>
+    </column>
+    <column id="53" parent="38" name="ptime">
+      <DasType>datetime|0s</DasType>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
+      <Position>8</Position>
+    </column>
+    <index id="54" parent="38" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="55" parent="38" name="video_root_idx">
+      <ColNames>video_id
+root</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="56" parent="38" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="57" parent="39" name="id">
+      <AutoIncrement>9</AutoIncrement>
+      <DasType>int|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="58" parent="39" name="content">
+      <DasType>varchar(500)|0s</DasType>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="59" parent="39" name="ctime">
+      <DasType>datetime|0s</DasType>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <Position>3</Position>
+    </column>
+    <column id="60" parent="39" name="mtime">
+      <DasType>datetime|0s</DasType>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
+      <Position>4</Position>
+    </column>
+    <index id="61" parent="39" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="62" parent="39" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="63" parent="40" name="id">
+      <AutoIncrement>9</AutoIncrement>
+      <DasType>int|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="64" parent="40" name="video_id">
+      <DasType>int|0s</DasType>
+      <Position>2</Position>
+    </column>
+    <column id="65" parent="40" name="user_id">
+      <DasType>int|0s</DasType>
+      <Position>3</Position>
+    </column>
+    <column id="66" parent="40" name="root">
+      <DasType>int|0s</DasType>
+      <Position>4</Position>
+    </column>
+    <column id="67" parent="40" name="parent">
+      <DasType>int|0s</DasType>
+      <Position>5</Position>
+    </column>
+    <column id="68" parent="40" name="ctime">
+      <DasType>datetime|0s</DasType>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <Position>6</Position>
+    </column>
+    <column id="69" parent="40" name="mtime">
+      <DasType>datetime|0s</DasType>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
+      <Position>7</Position>
+    </column>
+    <index id="70" parent="40" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="71" parent="40" name="video_root_idx">
+      <ColNames>video_id
+root</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="72" parent="40" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="73" parent="41" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <DasType>bigint|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="74" parent="41" name="from_user">
+      <DasType>bigint|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="75" parent="41" name="room">
+      <DasType>varchar(100)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="76" parent="41" name="content">
+      <DasType>varchar(500)|0s</DasType>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="77" parent="41" name="ctime">
+      <DasType>timestamp|0s</DasType>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <index id="78" parent="41" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="79" parent="41" name="idx_room_time">
+      <ColNames>room
+ctime</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="80" parent="41" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="81" parent="42" name="to_user_id">
+      <DasType>bigint|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="82" parent="42" name="from_user_id">
+      <DasType>bigint|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="83" parent="42" name="status">
+      <DasType>tinyint|0s</DasType>
+      <DefaultExpression>1</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="84" parent="42" name="ctime">
+      <DasType>timestamp|0s</DasType>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="85" parent="42" name="mtime">
+      <DasType>timestamp|0s</DasType>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <index id="86" parent="42" name="PRIMARY">
+      <ColNames>to_user_id
+from_user_id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="87" parent="42" name="idx_from_user_id">
+      <ColNames>from_user_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="88" parent="42" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="89" parent="43" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <DasType>bigint|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="90" parent="43" name="user_id">
+      <DasType>bigint|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="91" parent="43" name="last_ack_msg_id">
+      <DasType>bigint|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="92" parent="43" name="ctime">
+      <DasType>timestamp|0s</DasType>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <index id="93" parent="43" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="94" parent="43" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="95" parent="44" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <DasType>bigint|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="96" parent="44" name="user_id">
+      <DasType>bigint|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="97" parent="44" name="msg_id">
+      <DasType>bigint|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="98" parent="44" name="is_read">
+      <DasType>tinyint|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="99" parent="44" name="ctime">
+      <DasType>timestamp|0s</DasType>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <index id="100" parent="44" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="101" parent="44" name="idx_user_time_msg_id">
+      <ColNames>user_id
+ctime
+msg_id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="102" parent="44" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="103" parent="45" name="id">
+      <AutoIncrement>1</AutoIncrement>
+      <DasType>bigint|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="104" parent="45" name="name">
+      <Comment>The username</Comment>
+      <DasType>varchar(32)|0s</DasType>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="105" parent="45" name="password">
+      <Comment>The password</Comment>
+      <DasType>varchar(100)|0s</DasType>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="106" parent="45" name="follow_count">
+      <Comment>The follow_count</Comment>
+      <DasType>bigint|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="107" parent="45" name="follower_count">
+      <Comment>The follower_count</Comment>
+      <DasType>bigint|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <column id="108" parent="45" name="avatar">
+      <DasType>varchar(255)|0s</DasType>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+      <Position>6</Position>
+    </column>
+    <column id="109" parent="45" name="background_image">
+      <DasType>varchar(255)|0s</DasType>
+      <Position>7</Position>
+    </column>
+    <column id="110" parent="45" name="signature">
+      <DasType>varchar(255)|0s</DasType>
+      <DefaultExpression>&apos;&apos;</DefaultExpression>
+      <Position>8</Position>
+    </column>
+    <column id="111" parent="45" name="total_favorited">
+      <Comment>The total_favorited</Comment>
+      <DasType>bigint|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>9</Position>
+    </column>
+    <column id="112" parent="45" name="work_count">
+      <Comment>The work_count</Comment>
+      <DasType>bigint|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>10</Position>
+    </column>
+    <column id="113" parent="45" name="favorite_count">
+      <Comment>The favorite_count</Comment>
+      <DasType>bigint|0s</DasType>
+      <DefaultExpression>0</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>11</Position>
+    </column>
+    <column id="114" parent="45" name="create_at">
+      <DasType>timestamp|0s</DasType>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <NotNull>1</NotNull>
+      <Position>12</Position>
+    </column>
+    <column id="115" parent="45" name="update_at">
+      <DasType>timestamp|0s</DasType>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <NotNull>1</NotNull>
+      <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
+      <Position>13</Position>
+    </column>
+    <index id="116" parent="45" name="PRIMARY">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="117" parent="45" name="ind_name_password">
+      <ColNames>name
+password</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="118" parent="45" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+  </database-model>
+</dataSource>

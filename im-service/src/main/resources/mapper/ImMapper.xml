@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.example.mapper.ImMapper">
+    <select id="queryNewMessage" resultType="Message">
+        select
+            m.id as id, t.user_id as to_user, m.from_user as from_user, m.content as content, t.ctime as ctime
+        from
+            timeline t join message m on t.msg_id = m.id
+        where
+            t.user_id = #{toUser} and t.ctime > #{time} and m.from_user = #{fromUser}
+        order by t.ctime;
+    </select>
+    <select id="queryMessageRecord" resultType="Message">
+        explain select * from message where room = #{room} and ctime > #{time} order by ctime;
+    </select>
+    <insert id="insertMessage" keyProperty="id" useGeneratedKeys="true">
+        insert into
+            message (room, to_user_id, from_user_id, content)
+        values (#{room}, #{toUser} ,#{fromUser}, #{content});
+    </insert>
+    <insert id="insertTimeline" >
+        insert into timeline (user_id, msg_id)
+        values (#{toUserId}, #{msgId});
+    </insert>
+</mapper>
