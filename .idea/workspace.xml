@@ -4,7 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="86333be9-6acf-44a0-a57c-c95d34be987c" name="Changes" comment="" />
+    <list default="true" id="86333be9-6acf-44a0-a57c-c95d34be987c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/video-service/src/main/java/org/example/entity/Favorite.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-service/src/main/java/org/example/mapper/FavorMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-service/src/main/java/org/example/mapper/VideoMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-service/src/main/resources/mapper/FavorMapper.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video-service/src/main/resources/mapper/VideoMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/12a56854-0097-4bb2-be71-afb25bb10f8f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/12a56854-0097-4bb2-be71-afb25bb10f8f.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comment-service/src/main/java/org/example/controller/CommentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/comment-service/src/main/java/org/example/controller/CommentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comment-service/src/main/java/org/example/mapper/CommentMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/comment-service/src/main/java/org/example/mapper/CommentMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comment-service/src/main/java/org/example/service/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/comment-service/src/main/java/org/example/service/CommentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comment-service/src/main/java/org/example/service/impl/CommentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/comment-service/src/main/java/org/example/service/impl/CommentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/comment-service/src/main/resources/mapper/CommentMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/comment-service/src/main/resources/mapper/CommentMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-service/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/video-service/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/video-service/src/main/java/org/example/service/impl/FavorServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/video-service/src/main/java/org/example/service/impl/FavorServiceImpl.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,10 +28,13 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Interface" />
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -42,47 +60,48 @@
   <component name="ProjectViewState">
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "D:/code/douyin17/relation-service/src/main/resources/mapper",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler",
-    "spring.configuration.checksum": "e6a3f84c705fd9b724012f35a5742411",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;jdk.selected.JAVA_MODULE&quot;: &quot;17&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/code/douyin17/video-service/src/main/resources/mapper&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.general&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;7c6084c662f3ced3e1b08fcde886c8af&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="ReactorSettings">
     <option name="notificationShown" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\code\douyin17\video-service\src\main\resources\mapper" />
+      <recent name="D:\code\douyin17\im-service\src\main\resources" />
       <recent name="D:\code\douyin17\relation-service\src\main\resources\mapper" />
       <recent name="D:\code\douyin17\user-service\src\main\resources" />
       <recent name="D:\code\douyin17\api-commons\src\main\java\org\example" />
-      <recent name="D:\code\douyin17\user-service\src\main\java\org\example" />
-      <recent name="D:\code\douyin17\comment-service\src\main\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\code\douyin17\video-service\src\main\resources\mapper" />
       <recent name="D:\code\douyin17\im-service\src\main\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
@@ -104,7 +123,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.RelationApplication">
+  <component name="RunManager" selected="Spring Boot.CommentApplication">
     <configuration name="JwtUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.utils.JwtUtil" />
       <module name="api-commons" />
@@ -195,11 +214,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Spring Boot.CommentApplication" />
         <item itemvalue="Spring Boot.RelationApplication" />
         <item itemvalue="Spring Boot.UserApplication" />
         <item itemvalue="Application.JwtUtil" />
         <item itemvalue="Spring Boot.Main9527" />
-        <item itemvalue="Spring Boot.CommentApplication" />
       </list>
     </recent_temporary>
   </component>
@@ -219,7 +238,14 @@
       <workItem from="1724492306843" duration="836000" />
       <workItem from="1724493159911" duration="1779000" />
       <workItem from="1724494965953" duration="12832000" />
-      <workItem from="1724555164584" duration="7803000" />
+      <workItem from="1724555164584" duration="8791000" />
+      <workItem from="1724757763687" duration="418000" />
+      <workItem from="1724839732071" duration="792000" />
+      <workItem from="1724841973805" duration="56000" />
+      <workItem from="1724931661352" duration="606000" />
+      <workItem from="1725016034725" duration="632000" />
+      <workItem from="1725020482158" duration="2530000" />
+      <workItem from="1725183846740" duration="3469000" />
     </task>
     <servers />
   </component>

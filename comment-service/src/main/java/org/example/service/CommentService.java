@@ -7,10 +7,8 @@ import java.util.List;
 import java.util.concurrent.ExecutionException;
 
 public interface CommentService {
-    List<Comment> queryFirstComments(int videoId, int page, int size);
-    List<Comment> queryInFloorComments(int videoId, int root, int page, int size);
-    List<Comment> queryFirstCommentFromDB(int videoId, int page, int size);
-    List<Comment> queryInFloorCommentsFromDB(int videoId, int root, int page, int size);
-    String commentAction(Action action) throws ExecutionException, InterruptedException;
+    List<Comment> queryComments(int videoId, int root, int page, int size);
+    List<Comment> queryCommentsFromDB(int videoId, int root, int page, int size);
+    String commentAction(Action action);
     void addComment(Comment comment);
 }
